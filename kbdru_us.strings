@@ -1,0 +1,13 @@
+﻿!ifndef LOCALIZED_STRINGS
+; Common strings
+!define FILE_PRODUCT_VERSION "1.4.0.0"
+!define PRODUCT_NAME "Russian (phonetic, US-based)"
+!define AUTHOR_NAME "Oliver Schneider (assarbad.net)"
+!define COPYRIGHT_YEAR "2007, 2015"
+!define DISPLAY_VERSION "1.4"
+!define BASENAME "kbdru_us"
+!define INSTALLER_EXE_NAME "${BASENAME}.exe"
+!define PRODUCT_WEBSITE "https://assarbad.net/en/stuff/MSKLC/"
+
+!define LOCALIZED_STRINGS 1
+!endif ; LOCALIZED_STRINGS
