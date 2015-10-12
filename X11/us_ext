@@ -1,0 +1,52 @@
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Based on my Windows layout (kbdus_06) with the exact same symbols.
+// On Kubuntu copy into folder /usr/share/X11/xkb/symbols/ and add the following
+// line to /usr/share/X11/xkb/rules/evdev.lst under layouts:
+//
+// us_ext      English (US + DE, IS, PL, Nordic)
+//
+
+default
+partial alphanumeric_keys modifier_keys
+xkb_symbols "en_us_ext"
+{
+	name[Group1] = "English (US + DE, IS, PL, Nordic)";
+	include "us(euro)"
+	key <AB01> { [       NoSymbol,       NoSymbol,      zabovedot,       Zabovedot ] }; // ż  Ż 
+	key <AB02> { [       NoSymbol,       NoSymbol,        eogonek,         Eogonek ] }; // ę  Ę 
+	key <AB03> { [       NoSymbol,       NoSymbol,         cacute,          Cacute ] }; // ć  Ć 
+	key <AB06> { [       NoSymbol,       NoSymbol,         nacute,          Nacute ] }; // ń  Ń 
+	key <AB07> { [       NoSymbol,       NoSymbol,       Greek_mu                  ] }; // μ    
+	key <AB09> { [       NoSymbol,       NoSymbol,             ae,              AE ] }; // æ  Æ 
+	key <AB10> { [       NoSymbol,       NoSymbol,          aring,           Aring ] }; // å  Å 
+	key <AC01> { [       NoSymbol,       NoSymbol,        aogonek,         Aogonek ] }; // ą  Ą 
+	key <AC02> { [       NoSymbol,       NoSymbol,         sacute,          Sacute ] }; // ś  Ś 
+	key <AC03> { [       NoSymbol,       NoSymbol,            eth,             Eth ] }; // ð  Ð 
+	key <AC09> { [       NoSymbol,       NoSymbol,         oslash,        Ooblique ] }; // ø  Ø 
+	key <AC10> { [       NoSymbol,       NoSymbol,     odiaeresis,      Odiaeresis ] }; // ö  Ö 
+	key <AC11> { [       NoSymbol,       NoSymbol,     adiaeresis,      Adiaeresis ] }; // ä  Ä 
+	key <AD01> { [       NoSymbol,       NoSymbol,             at,        EuroSign ] }; // @  € 
+	key <AD02> { [       NoSymbol,       NoSymbol,        lstroke,         Lstroke ] }; // ł  Ł 
+	key <AD03> { [       NoSymbol,       NoSymbol,         eacute,          Eacute ] }; // é  É 
+	key <AD04> { [       NoSymbol,       NoSymbol,      copyright,      registered ] }; // ©  ® 
+	key <AD05> { [       NoSymbol,       NoSymbol,      trademark                  ] }; // ™    
+	key <AD06> { [       NoSymbol,       NoSymbol,         yacute,          Yacute ] }; // ý  Ý 
+	key <AD07> { [       NoSymbol,       NoSymbol,         uacute,          Uacute ] }; // ú    
+	key <AD08> { [       NoSymbol,       NoSymbol,         iacute,          Iacute ] }; // í  Í 
+	key <AD09> { [       NoSymbol,       NoSymbol,         oacute,          Oacute ] }; // ó  Ó 
+	key <AD10> { [       NoSymbol,       NoSymbol,          thorn,           Thorn ] }; // þ  Þ 
+	key <AD11> { [       NoSymbol,       NoSymbol,     udiaeresis,      Udiaeresis ] }; // ü    
+	key <AD12> { [       NoSymbol,       NoSymbol,     dead_grave                  ] }; // D`   
+	key <AE01> { [       NoSymbol,       NoSymbol,     onequarter                  ] }; // ¼    
+	key <AE02> { [       NoSymbol,       NoSymbol,        onehalf,     twosuperior ] }; // ½  ² 
+	key <AE03> { [       NoSymbol,       NoSymbol,  threequarters,   threesuperior ] }; // ¾  ³ 
+	key <AE04> { [       NoSymbol,       NoSymbol,         careof                  ] }; // ℅    
+	key <AE05> { [       NoSymbol,       NoSymbol,       NoSymbol,           U2030 ] }; //    ‰ 
+	key <AE08> { [       NoSymbol,       NoSymbol,      oneeighth,        infinity ] }; // ⅛  ∞ 
+	key <AE11> { [       NoSymbol,       NoSymbol,         ssharp,      Greek_beta ] }; // ß  β 
+	key <AE12> { [       NoSymbol,       NoSymbol,     dead_acute                  ] }; // D´   
+	key <BKSL> { [       NoSymbol,       NoSymbol, dead_diaeresis,    dead_cedilla ] }; // D¨ D¸
+	key <TLDE> { [       NoSymbol,       NoSymbol,         degree, dead_circumflex ] }; // °  D^
+	key <RWIN> { [       Multi_key                                                 ] };
+};
