@@ -2,7 +2,7 @@
 
 Feel free to use these in any way you want under one of the permissive (non-Copyleft) licenses approved by the OSI or CC0 terms. If unsure, simply ask.
 
-I am providing code-signed versions of the setups in the download section.
+I am providing code-signed versions of the setups in the [download section](https://bitbucket.org/assarbad/kbd_layouts/downloads).
 
 ## Windows version (English extended)
 
@@ -40,6 +40,8 @@ Here's how the layout looks in the various states a keyboard can have ...
 This one I have tested on Kubuntu 12.04 exclusively. There are lots and lots of resources on how to do it on Kubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
 
 Unlike the Windows version which is a keyboard layout in its own right, the way X11 and `xkb` work allows us to *extend* existing definitions. This is much more convenient and also allows for a more readable way of expressing this. I call it `us_ext`.
+
+Find it under [`./X11`](https://bitbucket.org/assarbad/kbd_layouts/src//X11/).
 
 ### Installation on Kubuntu 12.04
 
