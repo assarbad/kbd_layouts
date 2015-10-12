@@ -4,7 +4,7 @@ Feel free to use these in any way you want under one of the permissive (non-Copy
 
 I am providing code-signed versions of the setups in the [download section](https://bitbucket.org/assarbad/kbd_layouts/downloads).
 
-## Windows version (English extended)
+## English extended (`kbdus_xx`) - Windows version
 
 The Windows keyboard layout has evolved over quite some time. The (currently) final incarnation is what I call `kbdus_xx`. Whereas the `kbd` is for "keyboard", `us` refers to the fact that it's based on the "English (US)" layout and `xx` refers to the extensive
 nature of the layout compared to the base version.
@@ -35,7 +35,7 @@ Here's how the layout looks in the various states a keyboard can have ...
 
 ![AltGr+Shift (Ctrl+Alt+Shift) pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdus_xx/04_plus_shift_altgr.png)
 
-## XKB version (X11) of `kbdus_xx`
+## XKB version (X11) of `kbdus_xx` (`us_ext`)
 
 This one I have tested on Kubuntu 12.04 exclusively. There are lots and lots of resources on how to do it on Kubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
 
@@ -89,3 +89,25 @@ and in the `.xml` file insert the following block (or a sane variation thereof):
 here's how that looks in Vim:
 
 ![The screenshot](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/evdev_xml.png)
+
+## Russian phonetic (`kbdru_us`) - Windows version
+
+This is a kind of phonetic keyboard layout that tries to squeeze as many Cyrillic (not just Russian) characters onto a keyboard layout. Obviously for practical reasons I *had* to assign some characters in ways that are not exactly phonetic. But I tried to be pragmatic about it.
+
+Here's how the layout looks in the various states a keyboard can have ...
+
+### Small letters (no combination with special keys)
+
+![Small letters (no combination with special keys)](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/01_no_modifiers.png)
+
+### Capital letters, Shift pressed
+
+![Capital letters, Shift pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/02_plus_shift.png)
+
+### AltGr (Ctrl+Alt), that's the one right of the space bar, pressed
+
+![AltGr (Ctrl+Alt), that's the one right of the space bar, pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/03_plus_altgr.png)
+
+### AltGr+Shift (Ctrl+Alt+Shift) pressed
+
+![AltGr+Shift (Ctrl+Alt+Shift) pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/04_plus_shift_altgr.png)
