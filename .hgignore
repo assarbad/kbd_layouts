@@ -1,2 +1,3 @@
 syntax: glob
 kbdus_*/kbd*_ia64.msi
+*.sha2.nsi
