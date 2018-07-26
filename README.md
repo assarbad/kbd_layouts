@@ -37,13 +37,13 @@ Here's how the layout looks in the various states a keyboard can have ...
 
 ## xkb version (X11) of `kbdus_xx` (`us_ext`)
 
-This one I have tested on Kubuntu 12.04 and lately on Linux Mint 18.1 (which is based on Ubuntu 16.04). There are lots and lots of resources on how to do it on Ubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
+This one I have tested on Kubuntu 12.04 and lately on Linux Mint 18.1 and 19 (which are based on Ubuntu 16.04 and 18.04 respectively). There are lots and lots of resources on how to do it on Ubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
 
 Unlike the Windows version which is a keyboard layout in its own right, the way X11 and `xkb` work allows us to *extend* existing definitions. This is much more convenient and also allows for a more readable way of expressing this. I call it `us_ext`.
 
 Find it under [`./X11`](https://bitbucket.org/assarbad/kbd_layouts/src//X11/).
 
-### Installation on Kubuntu 12.04, Linux Mint 18.1 (which is based on Ubuntu 16.04)
+### Installation on Kubuntu 12.04, Linux Mint 18.1 and 19 (Ubuntu 16.04 and 18.04)
 
 Since I was unable to install the layout in the way described on the linked page, here's how to install it on Kubuntu 12.04 or Linux Mint 18.1 (and presumably Ubuntu 16.04).
 
