@@ -4,7 +4,7 @@
 // On Kubuntu copy into folder /usr/share/X11/xkb/symbols/ and add the following
 // line to /usr/share/X11/xkb/rules/evdev.lst under layouts:
 //
-// us_ext      English v8 (US + DE, IS, PL, Nordic)
+// us_ext      English (US + DE, IS, PL, Nordic)
 //
 
 default

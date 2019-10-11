@@ -15,20 +15,20 @@ Since I was unable to install the layout in the way described on the linked page
 Files to modify:
 
 * `/usr/share/X11/xkb/symbols/us_ext`
-* `/usr/share/X11/xkb/rules/evdev.lst`
+* `/usr/share/X11/xkb/rules/evdev.lst` (and _optionally_ `/usr/share/X11/xkb/rules/xorg.lst`)
 * `/usr/share/X11/xkb/rules/evdev.xml`
 
 First thing is to copy the `us_ext` file from this repository into `/usr/share/X11/xkb/symbols/`. E.g. via:
 
     sudo cp ./us_ext /usr/share/X11/xkb/symbols/
 
-Once that is taken care of, invoke your favorite editor (mine is Vim with tabs enabled) to edit two configuration files belonging to `xkb`, so for me it was:
+Once that is taken care of, invoke your favorite editor (mine is Vim with tabs enabled) to edit two (or optionally three) configuration files belonging to `xkb`, so for me it was:
 
-    sudo vim -p /usr/share/X11/xkb/rules/evdev.{lst,xml}
+    sudo vim -p /usr/share/X11/xkb/rules/{xorg.lst,evdev.{lst,xml}}
 
 in the `.lst` file insert the following line:
 
-    us_ext          English v8 (US + DE, IS, PL, Nordic)
+    us_ext          English (US + DE, IS, PL, Nordic)
 
 right under `us` in the `! layout` section. Here's a screenshot:
 
@@ -55,4 +55,24 @@ here's how that looks in Vim:
 
 ![The screenshot](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/evdev_xml.png)
 
+### Further actions to take
+
+You may have to edit `/etc/default/keyboard` to say:
+
+```
+XKBLAYOUT=us_ext
+```
+
+... if you want it to be the default.
+
+Additionally if you want this to take effect on the console, you may have to run `setupcon`. To have it (hopefully) take effect without reboot run `udevadm trigger —subsystem-match=input —action=change`.
+
 **Note:** if you replaced an older version of `us_ext` by a newer version, to reload the keyboard layout without restarting X11, run: `setxkbmap -layout us_ext`.
+
+## Further reading
+
+* [Custom keyboard layout definitions](https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions)
+* [XKB](https://www.x.org/wiki/XKB/) documentation on X.org
+* [Custom Keyboard in Linux/X11](http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11)
+* [Creating custom keyboard layouts for X11 using XKB](https://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html)
+* [an X11 keyboard layout for scholars of old germanic](https://swanrad.ch/an-x11-keyboard-layout-for-scholars-of-old-germanic/)
