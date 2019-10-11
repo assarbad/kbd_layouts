@@ -57,6 +57,8 @@ here's how that looks in Vim:
 
 ### Further actions to take
 
+**Note:** if you replaced an older version of `us_ext` by a newer version, to reload the keyboard layout without restarting X11, run: `setxkbmap -layout us_ext`.
+
 You may have to edit `/etc/default/keyboard` to say:
 
 ```
@@ -67,7 +69,11 @@ XKBLAYOUT=us_ext
 
 Additionally if you want this to take effect on the console, you may have to run `setupcon`. To have it (hopefully) take effect without reboot run `udevadm trigger —subsystem-match=input —action=change`.
 
-**Note:** if you replaced an older version of `us_ext` by a newer version, to reload the keyboard layout without restarting X11, run: `setxkbmap -layout us_ext`.
+Sometimes, when your keyboard layout doesn't show up you may want to use `dpkg-reconfigure xkb-data` to make your changes known.
+
+### Choosing the layout
+
+On (vanilla) Ubuntu I had to _first_ select "English (United States)" which brought me into a list of "variants" which included my layout as "English (US + DE, IS, PL, Nordic)".
 
 ## Further reading
 
