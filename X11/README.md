@@ -6,7 +6,7 @@ This one I have tested on Kubuntu 12.04 and lately on Linux Mint 18.1 and 19 (wh
 
 Unlike the Windows version which is a keyboard layout in its own right, the way X11 and `xkb` work allows us to *extend* existing definitions. This is much more convenient and also allows for a more readable way of expressing this. I call it `us_ext`.
 
-Find it under [`./X11`](https://bitbucket.org/assarbad/kbd_layouts/src//X11/).
+Find it under `./X11`.
 
 ### Installation on Kubuntu 12.04, Linux Mint 18.1 and 19 (Ubuntu 16.04 and 18.04)
 
@@ -24,7 +24,7 @@ First thing is to copy the `us_ext` file from this repository into `/usr/share/X
 
 Once that is taken care of, invoke your favorite editor (mine is Vim with tabs enabled) to edit two (or optionally three) configuration files belonging to `xkb`, so for me it was:
 
-    sudo vim -p /usr/share/X11/xkb/rules/{xorg.lst,evdev.{lst,xml}}
+    sudo vim -p /usr/share/X11/xkb/rules/evdev.{lst,xml}
 
 in the `.lst` file insert the following line:
 
@@ -32,7 +32,7 @@ in the `.lst` file insert the following line:
 
 right under `us` in the `! layout` section. Here's a screenshot:
 
-![The screenshot](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/evdev_lst.png)
+![The screenshot](../images/evdev_lst.png)
 
 and in the `.xml` file insert the following block (or a sane variation thereof):
 
@@ -53,7 +53,7 @@ and in the `.xml` file insert the following block (or a sane variation thereof):
 
 here's how that looks in Vim:
 
-![The screenshot](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/evdev_xml.png)
+![The screenshot](../images/evdev_xml.png)
 
 ### Further actions to take
 
@@ -67,13 +67,17 @@ XKBLAYOUT=us_ext
 
 ... if you want it to be the default.
 
-Additionally if you want this to take effect on the console, you may have to run `setupcon`. To have it (hopefully) take effect without reboot run `udevadm trigger —subsystem-match=input —action=change`.
+Additionally if you want this to take effect on the console, you may have to run `setupcon`. To have it (hopefully) take effect without reboot run `udevadm trigger --subsystem-match=input --action=change`.
 
 Sometimes, when your keyboard layout doesn't show up you may want to use `dpkg-reconfigure xkb-data` to make your changes known.
 
 ### Choosing the layout
 
 On (vanilla) Ubuntu I had to _first_ select "English (United States)" which brought me into a list of "variants" which included my layout as "English (US + DE, IS, PL, Nordic)".
+
+## Miscellaneous notes
+
+* Use `xev` to see the key codes.
 
 ## Further reading
 

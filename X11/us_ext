@@ -4,7 +4,7 @@
 // On Kubuntu copy into folder /usr/share/X11/xkb/symbols/ and add the following
 // line to /usr/share/X11/xkb/rules/evdev.lst under layouts:
 //
-// us_ext      English (US + DE, IS, PL, Nordic)
+// us_ext      English (US + DE, PL, Nordic)
 //
 
 default
@@ -23,16 +23,18 @@ xkb_symbols "en_us_ext"
 	key <AB04> { [       NoSymbol,       NoSymbol,          UFFFD,           UFFFD ] }; // [V] �  �
 	key <AB05> { [       NoSymbol,       NoSymbol,          U2114,           U2116 ] }; // [B] ℔  №
 	key <AB06> { [       NoSymbol,       NoSymbol,         nacute,          Nacute ] }; // [N] ń  Ń
-	key <AB07> { [       NoSymbol,       NoSymbol,       Greek_mu                  ] }; // [M] μ
+	key <AB07> { [       NoSymbol,       NoSymbol,       Greek_mu,        Greek_pi ] }; // [M] μ  π
 	key <AB08> { [       NoSymbol,       NoSymbol,         oslash,        Ooblique ] }; // [<] ø  Ø
 	key <AB09> { [       NoSymbol,       NoSymbol,             ae,              AE ] }; // [>] æ  Æ
 	key <AB10> { [       NoSymbol,       NoSymbol,          aring,           Aring ] }; // [?] å  Å
-	key <AC01> { [       NoSymbol,       NoSymbol,        aogonek,         Aogonek ] }; // [S] ą  Ą
+	key <AC01> { [       NoSymbol,       NoSymbol,        aogonek,         Aogonek ] }; // [A] ą  Ą
 	key <AC02> { [       NoSymbol,       NoSymbol,         sacute,          Sacute ] }; // [S] ś  Ś
 	key <AC03> { [       NoSymbol,       NoSymbol,            eth,             Eth ] }; // [D] ð  Ð
 	key <AC04> { [       NoSymbol,       NoSymbol,          U017F,         section ] }; // [F] ſ  §
 	key <AC05> { [       NoSymbol,       NoSymbol,          U1D79,           UA77D ] }; // [G] ᵹ  Ᵹ
+	key <AC06> { [       NoSymbol,       NoSymbol,         U1F601,          U1F9D0 ] }; // [H] 😁 🧐
 	key <AC07> { [       NoSymbol,       NoSymbol,          U00EF,           U00CF ] }; // [J] ï  Ï
+	key <AC08> { [       NoSymbol,       NoSymbol,         U1F609,          U1F928 ] }; // [K] 😉 🤨
 	key <AC09> { [       NoSymbol,       NoSymbol,        lstroke,         Lstroke ] }; // [L] ł  Ł
 	key <AC10> { [       NoSymbol,       NoSymbol,     odiaeresis,      Odiaeresis ] }; // [:] ö  Ö
 	key <AC11> { [       NoSymbol,       NoSymbol,     adiaeresis,      Adiaeresis ] }; // ["] ä  Ä
@@ -61,6 +63,6 @@ xkb_symbols "en_us_ext"
 	key <AE11> { [       NoSymbol,       NoSymbol,         ssharp,      Greek_beta ] }; // [-] ß  β
 	key <AE12> { [       NoSymbol,       NoSymbol,     dead_acute                  ] }; // D´
 	key <BKSL> { [       NoSymbol,       NoSymbol, dead_diaeresis                  ] }; // D¨
-	key <TLDE> { [       NoSymbol,       NoSymbol,         degree,  dead_abovering ] }; // °  D
+	key <TLDE> { [       NoSymbol,       NoSymbol,         degree,  dead_abovering ] }; // °  D°
 	key <RWIN> { [       Multi_key                                                 ] };
 };

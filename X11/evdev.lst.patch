@@ -1,0 +1,10 @@
+--- orig/evdev.lst	2020-06-19 21:40:36.300991623 +0200
++++ patched/evdev.lst	2020-06-19 21:50:01.645238218 +0200
+@@ -192,6 +192,7 @@
+ 
+ ! layout
+   us              English (US)
++  us_ext          English (US + DE, IS, PL, Nordic)
+   af              Afghani
+   ara             Arabic
+   al              Albanian

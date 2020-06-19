@@ -2,8 +2,6 @@
 
 Feel free to use these in any way you want under one of the permissive (non-Copyleft) licenses approved by the OSI or CC0 terms. If unsure, simply ask.
 
-I am providing code-signed versions of the setups in the [download section](https://bitbucket.org/assarbad/kbd_layouts/downloads).
-
 ## English extended (`kbdus_xx`) - Windows version
 
 The Windows keyboard layout has evolved over quite some time. The (currently) final incarnation is what I call `kbdus_xx`. Whereas the `kbd` is for "keyboard", `us` refers to the fact that it's based on the "English (US)" layout and `xx` refers to the extensive
@@ -21,19 +19,19 @@ Here's how the layout looks in the various states a keyboard can have ...
 
 ### Small letters (no combination with special keys)
 
-![Small letters (no combination with special keys)](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdus_xx/01_no_modifiers.png)
+![Small letters (no combination with special keys)](images/kbdus_xx/01_no_modifiers.png)
 
 ### Capital letters, Shift pressed
 
-![Capital letters, Shift pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdus_xx/02_plus_shift.png)
+![Capital letters, Shift pressed](images/kbdus_xx/02_plus_shift.png)
 
 ### AltGr (Ctrl+Alt), that's the one right of the space bar, pressed
 
-![AltGr (Ctrl+Alt), that's the one right of the space bar, pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdus_xx/03_plus_altgr.png)
+![AltGr (Ctrl+Alt), that's the one right of the space bar, pressed](images/kbdus_xx/03_plus_altgr.png)
 
 ### AltGr+Shift (Ctrl+Alt+Shift) pressed
 
-![AltGr+Shift (Ctrl+Alt+Shift) pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdus_xx/04_plus_shift_altgr.png)
+![AltGr+Shift (Ctrl+Alt+Shift) pressed](images/kbdus_xx/04_plus_shift_altgr.png)
 
 ## Russian phonetic (`kbdru_us`) - Windows version
 
@@ -43,16 +41,16 @@ Here's how the layout looks in the various states a keyboard can have ...
 
 ### Small letters (no combination with special keys)
 
-![Small letters (no combination with special keys)](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/01_no_modifiers.png)
+![Small letters (no combination with special keys)](images/kbdru_us/01_no_modifiers.png)
 
 ### Capital letters, Shift pressed
 
-![Capital letters, Shift pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/02_plus_shift.png)
+![Capital letters, Shift pressed](images/kbdru_us/02_plus_shift.png)
 
 ### AltGr (Ctrl+Alt), that's the one right of the space bar, pressed
 
-![AltGr (Ctrl+Alt), that's the one right of the space bar, pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/03_plus_altgr.png)
+![AltGr (Ctrl+Alt), that's the one right of the space bar, pressed](images/kbdru_us/03_plus_altgr.png)
 
 ### AltGr+Shift (Ctrl+Alt+Shift) pressed
 
-![AltGr+Shift (Ctrl+Alt+Shift) pressed](https://bitbucket.org/assarbad/kbd_layouts/raw/tip/images/kbdru_us/04_plus_shift_altgr.png)
+![AltGr+Shift (Ctrl+Alt+Shift) pressed](images/kbdru_us/04_plus_shift_altgr.png)
