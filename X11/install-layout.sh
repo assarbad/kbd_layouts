@@ -53,4 +53,4 @@ if [[ -f "$fname" ]] && ! grep -vq ^XKBLAYOUT=us_ext "$fname"; then
 fi
 # Remove backup files
 ( set -x; rm -f "$XKBDIR/rules"/evdev.{lst,xml}.orig )
-echo -e "${cW}INFO:${cZ} don't forget to run ${cW}setxkbmap -layout us_ext${cW} from your own user context"
+echo -e "${cW}INFO:${cZ} don't forget to run ${cW}setxkbmap -layout us_ext${cZ} from your own user context"
