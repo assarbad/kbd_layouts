@@ -6,6 +6,8 @@ This one I have tested on Kubuntu 12.04 and lately on Linux Mint 18.1 and 19 (wh
 
 Unlike the Windows version which is a keyboard layout in its own right, the way X11 and `xkb` work allows us to *extend* existing definitions. This is much more convenient and also allows for a more readable way of expressing this. I call it `us_ext`.
 
+![Full layout](../images/us_ext.png)
+
 Find it under `./X11`.
 
 ### Installation on Kubuntu 12.04, Linux Mint 18.1 and 19 (Ubuntu 16.04 and 18.04)
