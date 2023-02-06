@@ -1,5 +1,5 @@
---- orig/evdev.lst	2020-06-19 21:40:36.300991623 +0200
-+++ patched/evdev.lst	2020-06-19 21:50:01.645238218 +0200
+--- evdev.lst	2023-02-06 23:52:31.475346892 +0100
++++ evdev.lst.new	2023-02-06 23:58:31.534913611 +0100
 @@ -192,6 +192,7 @@
  
  ! layout
@@ -8,3 +8,11 @@
    af              Afghani
    ara             Arabic
    al              Albanian
+@@ -251,6 +252,7 @@
+   pt              Portuguese
+   ro              Romanian
+   ru              Russian
++  ru_us           Russian (phonetic, US-based)
+   rs              Serbian
+   si              Slovenian
+   sk              Slovak

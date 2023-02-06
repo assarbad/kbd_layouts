@@ -1,5 +1,5 @@
---- orig/evdev.xml	2020-06-19 21:40:39.960987476 +0200
-+++ patched/evdev.xml	2020-06-19 21:49:59.509235767 +0200
+--- evdev.xml	2023-02-06 23:52:45.583329286 +0100
++++ evdev.xml.new	2023-02-07 00:01:56.726677288 +0100
 @@ -1334,6 +1334,18 @@
    <layoutList>
      <layout>
@@ -19,3 +19,21 @@
          <name>us</name>
          <!-- Keyboard indicator for English layouts -->
          <shortDescription>en</shortDescription>
+@@ -1449,6 +1461,17 @@
+           </configItem>
+         </variant>
+         <variant>
++          <configItem>
++            <name>ru_us</name>
++            <!-- Keyboard indicator for Russian layouts -->
++            <shortDescription>ru</shortDescription>
++            <description>Russian (phonetic, US-based)</description>
++            <languageList>
++              <iso639Id>rus</iso639Id>
++            </languageList>
++          </configItem>
++        </variant>
++        <variant>
+           <configItem>
+             <name>rus</name>
+             <!-- Keyboard indicator for Russian layouts -->

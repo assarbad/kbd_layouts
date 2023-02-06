@@ -41,6 +41,12 @@ if ! ( set -x; install -p -m 0644 -g root -o root "$fname" $XKBDIR/symbols/ ); t
 	rm -f "$fname"
 	exit 1
 fi
+fname="$CURRABSPATH/ru_us"
+if ! ( set -x; install -p -m 0644 -g root -o root "$fname" $XKBDIR/symbols/ ); then
+	echo "${cR}FATAL:${cZ} Removing $fname ..."
+	rm -f "$fname"
+	exit 1
+fi
 ( set -x; setxkbmap -layout us_ext )
 ( set -x; udevadm trigger --subsystem-match=input --action=change )
 fname=/etc/default/keyboard

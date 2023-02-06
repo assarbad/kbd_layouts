@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
-// Based on my Windows layout (kbdus_06) with the exact same symbols.
+// Based on my Windows layout (kbdus_xx).
 // On Kubuntu copy into folder /usr/share/X11/xkb/symbols/ and add the following
 // line to /usr/share/X11/xkb/rules/evdev.lst under layouts:
 //
