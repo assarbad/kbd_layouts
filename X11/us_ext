@@ -9,7 +9,7 @@
 
 default
 partial alphanumeric_keys modifier_keys
-xkb_symbols "en_us_ext"
+xkb_symbols "unicode"
 {
 	// ~!@#$%^&*()_+ == TLDE, AE01 .. AE12
 	// QWERTYUIOP{}| == AD01 .. AD12, BKSL
@@ -64,5 +64,6 @@ xkb_symbols "en_us_ext"
 	key <AE12> { [       NoSymbol,       NoSymbol,     dead_acute                  ] }; // D´
 	key <BKSL> { [       NoSymbol,       NoSymbol, dead_diaeresis                  ] }; // D¨
 	key <TLDE> { [       NoSymbol,       NoSymbol,         degree,  dead_abovering ] }; // °  D°
+
 	key <RWIN> { [       Multi_key                                                 ] };
 };
