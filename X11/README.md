@@ -81,10 +81,42 @@ On (vanilla) Ubuntu I had to _first_ select "English (United States)" which brou
 
 * Use `xev` to see the key codes.
 
+## Troubleshooting
+
+* Show current keyboard layout and involved files: `setxkbmap -print -v 10` (the `-v` is for `-verbose`)
+* Show current keyboard layout: `setxkbmap -query` (way less verbose than the above)
+* Show (available) layouts: `localectl list-x11-keymap-layouts`
+* Show variants for a layout: `localectl list-x11-keymap-variants de`
+* Show current locale (and keyboard) settings: `localectl status`
+
+### Aliases to list various traits related to keyboard layouts
+
+```
+alias lsxkbmodels="sed '/^! model$/,/^ *$/!d;//d' /usr/share/X11/xkb/rules/base.lst"
+alias lsxkblayouts="sed '/^! layout$/,/^ *$/!d;//d' /usr/share/X11/xkb/rules/base.lst"
+alias lsxkbvariants="sed '/^! variant$/,/^ *$/!d;//d' /usr/share/X11/xkb/rules/base.lst"
+alias lsxkboptions="sed '/^! option$/,/^ *$/!d;//d' /usr/share/X11/xkb/rules/base.lst"
+
+alias viewxkb="less -M '+/^\s*\!\s\w+$' /usr/share/X11/xkb/rules/base.lst"
+alias viewxkbmodels="lsxkbmodels | less -M"
+alias viewxkblayouts="lsxkblayouts | less -M"
+alias viewxkbvariants="lsxkbvariants | less -M"
+alias viewxkboptions="lsxkboptions | less -M"
+```
+
+Source: [unix.stackexchange.com](https://unix.stackexchange.com/a/356782)
+
 ## Further reading
 
 * [Custom keyboard layout definitions](https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions)
 * [XKB](https://www.x.org/wiki/XKB/) documentation on X.org
-* [Custom Keyboard in Linux/X11](http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11)
+    * [The X Keyboard Extension: Protocol Specification](https://www.x.org/archive//current/doc/kbproto/xkbproto.html) (X Version 11, Release 7.7, Version 1.0)
+* [An Unreliable Guide to XKB Configuration](https://www.charvolant.org/doug/xkb/)
+* [Custom Keyboard in Linux/X11](https://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11)
 * [Creating custom keyboard layouts for X11 using XKB](https://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html)
-* [an X11 keyboard layout for scholars of old germanic](https://swanrad.ch/an-x11-keyboard-layout-for-scholars-of-old-germanic/)
+* [An X11 keyboard layout for scholars of old germanic](https://swanrad.ch/an-x11-keyboard-layout-for-scholars-of-old-germanic/)
+* [Madduck's Extending the X keyboard map with xkb guide](https://web.archive.org/web/20170825051821/http://madduck.net:80/docs/extending-xkb/)
+* [Keyboard layout switching](https://wiki.gentoo.org/wiki/Keyboard_layout_switching) (Gentoo Wiki)
+* [Xorg/Keyboard configuration](https://wiki.archlinux.org/title/Xorg/Keyboard_configuration) (Arch Wiki)
+* [damko/xkb_kinesis_advantage_dvorak_layout](https://github.com/damko/xkb_kinesis_advantage_dvorak_layout)
+* Man pages for [`xkeyboard-config`](https://man.archlinux.org/man/xkeyboard-config.7.en), [`setxkbmap`](https://man.archlinux.org/man/setxkbmap.1), [`xkbcomp`](https://man.archlinux.org/man/xkbcomp.1), [`ckbcomp`](https://www.mankier.com/1/ckbcomp)
