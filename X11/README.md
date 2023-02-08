@@ -2,13 +2,13 @@
 
 ## xkb version (X11) of `kbdus_xx` (`us_ext`)
 
-This one I have tested on Kubuntu 12.04 and lately on Linux Mint 18.1 and 19 (which are based on Ubuntu 16.04 and 18.04 respectively). There are lots and lots of resources on how to do it on Ubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](http://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
+This one I have tested  earliest on Kubuntu 12.04 and newest on Mint 21.1. There are lots and lots of resources on how to do it on Ubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](https://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
 
 Unlike the Windows version which is a keyboard layout in its own right, the way X11 and `xkb` work allows us to *extend* existing definitions. This is much more convenient and also allows for a more readable way of expressing this. I call it `us_ext`.
 
 ![Full layout](us_ext.png)
 
-Find it under `./X11`.
+(Side-note: this was created with [keyboard-layout-editor.com](http://www.keyboard-layout-editor.com/), [code on GitHub](https://github.com/ijprest/keyboard-layout-editor))
 
 ### Installation on Kubuntu 12.04, Linux Mint 18.1 and 19 (Ubuntu 16.04 and 18.04)
 

@@ -1,6 +1,6 @@
 [
   {
-    "name": "us_ext: English (US + DE, PL, Nordic) for X11",
+    "name": "kbdus_xx: English (US + DE, PL, Nordic) for Windows",
     "author": "Oliver Schneider",
     "notes": "https://github.com/assarbad/kbd_layouts",
     "plate": false,
@@ -53,8 +53,8 @@
     "^\n6\n\nˇ",
     "&\n7\n\ṅ",
     "*\n8\n∞\n~",
-    "(\n9\n«\n¸",
-    ")\n0\n»\n^",
+    "(\n9\n\n¸",
+    ")\n0\n\n^",
     "_\n-\nβ\nß",
     "+\n=\n\n'",
     {
@@ -133,9 +133,9 @@
     "D\n\nÐ\nð",
     "F\n\n§\nſ",
     "G\n\nꝽ\nᵹ",
-    "H\n\n🧐\n😁",
+    "H",
     "J\n\nÏ\nï",
-    "K\n\n🤨\n😉",
+    "K",
     "L\n\nŁ\nł",
     ":\n;\nÖ\nö",
     "\"\n'\nÄ\nä",
@@ -203,7 +203,7 @@
       "f": 4,
       "w": 1.25
     },
-    "<i class='fa fa-linux'></i>",
+    "<i class='fa fa-windows'></i>",
     {
       "a": 6,
       "f": 3,
@@ -225,7 +225,7 @@
       "f": 4,
       "w": 1.25
     },
-    "<i class='fa fa-linux'></i>",
+    "<i class='fa fa-windows'></i>",
     {
       "a": 6,
       "f": 3,

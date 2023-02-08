@@ -49,21 +49,23 @@ xkb_symbols "unicode"
 	key <AD09> { [       NoSymbol,       NoSymbol,         oacute,          Oacute ] }; // [O] ó  Ó
 	key <AD10> { [       NoSymbol,       NoSymbol,          thorn,           Thorn ] }; // [P] þ  Þ
 	key <AD11> { [       NoSymbol,       NoSymbol,     udiaeresis,      Udiaeresis ] }; // [{] ü  Ü
-	key <AD12> { [       NoSymbol,       NoSymbol,     dead_grave                  ] }; // D`
+	key <AD12> { [       NoSymbol,       NoSymbol,     dead_grave                  ] }; // [}] D`
 	key <AE01> { [       NoSymbol,       NoSymbol,     onequarter,      exclamdown ] }; // [1] ¼  ¡
 	key <AE02> { [       NoSymbol,       NoSymbol,        onehalf,     twosuperior ] }; // [2] ½  ²
 	key <AE03> { [       NoSymbol,       NoSymbol,  threequarters,   threesuperior ] }; // [3] ¾  ³
 	key <AE04> { [       NoSymbol,       NoSymbol,         careof,        EuroSign ] }; // [4] ℅  €
 	key <AE05> { [       NoSymbol,       NoSymbol,       NoSymbol,           U2030 ] }; // [5] €  ‰ (€ is inherited by us(euro))
-	key <AE06> { [       NoSymbol,       NoSymbol,     dead_caron                  ] }; // [6]
-	key <AE07> { [       NoSymbol,       NoSymbol,          U0307                  ] }; // [7]
-	key <AE08> { [       NoSymbol,       NoSymbol,     dead_tilde,        infinity ] }; // [8]
-	key <AE09> { [       NoSymbol,       NoSymbol,   dead_cedilla                  ] }; // [9]
-	key <AE10> { [       NoSymbol,       NoSymbol,dead_circumflex                  ] }; // [0]
+	key <AE06> { [       NoSymbol,       NoSymbol,     dead_caron                  ] }; // [6] Dˇ
+	key <AE07> { [       NoSymbol,       NoSymbol,          U0307                  ] }; // [7] Ḋ 
+	key <AE08> { [       NoSymbol,       NoSymbol,     dead_tilde,        infinity ] }; // [8] D~ ∞
+	key <AE09> { [       NoSymbol,       NoSymbol,  dead_cedillar,           U00AB ] }; // [9] D¸ «
+	key <AE10> { [       NoSymbol,       NoSymbol,dead_circumflexr,          U00BB ] }; // [0] D^ »
 	key <AE11> { [       NoSymbol,       NoSymbol,         ssharp,      Greek_beta ] }; // [-] ß  β
-	key <AE12> { [       NoSymbol,       NoSymbol,     dead_acute                  ] }; // D´
-	key <BKSL> { [       NoSymbol,       NoSymbol, dead_diaeresis                  ] }; // D¨
-	key <TLDE> { [       NoSymbol,       NoSymbol,         degree,  dead_abovering ] }; // °  D°
+	key <AE12> { [       NoSymbol,       NoSymbol,     dead_acute                  ] }; // [=] D´
+	key <BKSL> { [       NoSymbol,       NoSymbol, dead_diaeresis                  ] }; // [\] D¨
+	key <TLDE> { [       NoSymbol,       NoSymbol,         degree,  dead_abovering ] }; // [`] °  D°
 
 	key <RWIN> { [       Multi_key                                                 ] };
+
+	include "level3(ralt_switch)"
 };

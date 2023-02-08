@@ -19,6 +19,8 @@ Here's how the layout looks ...
 
 ![Full layout](images/kbdus_xx/keyboard-layout.png)
 
+(Side-note: this was created with [keyboard-layout-editor.com](http://www.keyboard-layout-editor.com/), [code on GitHub](https://github.com/ijprest/keyboard-layout-editor))
+
 ## Russian phonetic (`kbdru_us`) - Windows version
 
 This is a kind of phonetic keyboard layout that tries to squeeze as many Cyrillic (not just Russian) characters onto a keyboard layout. Obviously for practical reasons I *had* to assign some characters in ways that are not exactly phonetic. But I tried to be pragmatic about it.
