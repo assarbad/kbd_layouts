@@ -1,5 +1,5 @@
---- evdev.xml	2023-02-06 23:52:45.583329286 +0100
-+++ evdev.xml.new	2023-02-07 00:01:56.726677288 +0100
+--- evdev.xml.base
++++ evdev.xml.patched
 @@ -1334,6 +1334,18 @@
    <layoutList>
      <layout>
@@ -24,7 +24,7 @@
          </variant>
          <variant>
 +          <configItem>
-+            <name>ru_us</name>
++            <name>rus</name>
 +            <!-- Keyboard indicator for Russian layouts -->
 +            <shortDescription>ru</shortDescription>
 +            <description>Russian (phonetic, US-based)</description>

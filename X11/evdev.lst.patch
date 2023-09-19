@@ -1,18 +1,11 @@
---- evdev.lst	2023-02-06 23:52:31.475346892 +0100
-+++ evdev.lst.new	2023-02-06 23:58:31.534913611 +0100
-@@ -192,6 +192,7 @@
+--- evdev.lst.base
++++ evdev.lst.patched
+@@ -293,6 +293,8 @@
+   custom          A user-defined custom Layout
  
- ! layout
-   us              English (US)
-+  us_ext          English (US + DE, IS, PL, Nordic)
-   af              Afghani
-   ara             Arabic
-   al              Albanian
-@@ -251,6 +252,7 @@
-   pt              Portuguese
-   ro              Romanian
-   ru              Russian
-+  ru_us           Russian (phonetic, US-based)
-   rs              Serbian
-   si              Slovenian
-   sk              Slovak
+ ! variant
++  ru_us           us: Russian (phonetic, US-based)
++  us_ext          us: English (US + DE, IS, PL, Nordic)
+   chr             us: Cherokee
+   haw             us: Hawaiian
+   euro            us: English (US, euro on 5)
