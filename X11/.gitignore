@@ -1,0 +1,8 @@
+manjaro/*.base
+manjaro/*.orig
+manjaro/evdev.lst
+manjaro/evdev.xml
+ubuntu/*.base
+ubuntu/*.orig
+ubuntu/evdev.lst
+ubuntu/evdev.xml

@@ -1,0 +1,10 @@
+--- evdev.lst.base
++++ evdev.lst.patched
+@@ -222,6 +222,7 @@
+   za              English (South Africa)
+   gb              English (UK)
+   us              English (US)
++  us_ext          English (US + DE, IS, PL, Nordic)
+   epo             Esperanto
+   ee              Estonian
+   fo              Faroese
