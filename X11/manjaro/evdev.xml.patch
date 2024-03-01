@@ -1,20 +1,15 @@
 --- evdev.xml.base
 +++ evdev.xml.patched
-@@ -1794,6 +1794,17 @@
-             </languageList>
-           </configItem>
+@@ -3019,6 +3019,12 @@
          </variant>
-+        <variant>
-+          <configItem>
+         <variant>
+           <configItem>
 +            <name>us_ext</name>
-+            <!-- Keyboard indicator for English layouts -->
-+            <shortDescription>en</shortDescription>
 +            <description>English (US + DE, IS, PL, Nordic)</description>
-+            <languageList>
-+              <iso639Id>eng</iso639Id>
-+            </languageList>
 +          </configItem>
 +        </variant>
-       </variantList>
-     </layout>
-     <layout>
++        <variant>
++          <configItem>
+             <name>mac</name>
+             <description>English (Macintosh)</description>
+           </configItem>
