@@ -3,7 +3,7 @@ TARGETFILES:=evdev.lst.patch evdev.xml.patch
 all: $(TARGETFILES)
 
 %.patch: % %.base
-	diff --label="$<.base" --label="$<.patched" -u $<.base $<|tee $@
+	diff --label="$<.base" --label="$<.patched" --unified=10 $<.base $<|tee $@
 
 rebuild: clean all
 

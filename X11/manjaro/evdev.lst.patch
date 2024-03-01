@@ -1,10 +1,25 @@
 --- evdev.lst.base
 +++ evdev.lst.patched
-@@ -222,6 +222,7 @@
+@@ -215,20 +215,22 @@
+   nl              Dutch
+   bt              Dzongkha
+   au              English (Australia)
+   cm              English (Cameroon)
+   gh              English (Ghana)
+   nz              English (New Zealand)
+   ng              English (Nigeria)
    za              English (South Africa)
    gb              English (UK)
    us              English (US)
 +  us_ext          English (US + DE, IS, PL, Nordic)
++  ru_us           Russian (phonetic, US-based)
    epo             Esperanto
    ee              Estonian
    fo              Faroese
+   ph              Filipino
+   fi              Finnish
+   fr              French
+   ca              French (Canada)
+   cd              French (Democratic Republic of the Congo)
+   tg              French (Togo)
+   ge              Georgian

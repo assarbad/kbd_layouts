@@ -1,7 +1,14 @@
 --- evdev.xml.base
 +++ evdev.xml.patched
-@@ -3019,6 +3019,12 @@
-         </variant>
+@@ -2983,20 +2983,26 @@
+         <countryList>
+           <iso3166Id>US</iso3166Id>
+         </countryList>
+         <languageList>
+           <iso639Id>eng</iso639Id>
+         </languageList>
+       </configItem>
+       <variantList>
          <variant>
            <configItem>
 +            <name>us_ext</name>
@@ -10,6 +17,40 @@
 +        </variant>
 +        <variant>
 +          <configItem>
-             <name>mac</name>
-             <description>English (Macintosh)</description>
+             <name>euro</name>
+             <description>English (US, euro on 5)</description>
            </configItem>
+         </variant>
+         <variant>
+           <configItem>
+             <name>intl</name>
+             <description>English (US, intl., with dead keys)</description>
+           </configItem>
+         </variant>
+@@ -5870,20 +5876,26 @@
+         <countryList>
+           <iso3166Id>RU</iso3166Id>
+         </countryList>
+         <languageList>
+           <iso639Id>rus</iso639Id>
+         </languageList>
+       </configItem>
+       <variantList>
+         <variant>
+           <configItem>
++            <name>ru_us</name>
++            <description>Russian (phonetic, US-based)</description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
+             <name>phonetic</name>
+             <description>Russian (phonetic)</description>
+           </configItem>
+         </variant>
+         <variant>
+           <configItem>
+             <name>phonetic_winkeys</name>
+             <description>Russian (phonetic, Windows)</description>
+           </configItem>
+         </variant>
