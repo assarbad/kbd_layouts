@@ -7,17 +7,16 @@
 // ru_us       Russian (phonetic, US-based)
 //
 
-default
-partial alphanumeric_keys modifier_keys
-xkb_symbols "unicode"
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "rus"
 {
 	// ~!@#$%^&*()_+ == TLDE, AE01 .. AE12
 	// QWERTYUIOP{}| == AD01 .. AD12, BKSL
 	// ASDFGHJKL:"   == AC01 .. AC11
 	// ZXCVBNM<>?    == AB01 .. AB10
 	// NB: Currently not assigned:  Ukrainian_ie, Ukrainian_IE
-	name[Group1] = "Russian (phonetic, US-based)";
 	include "us(euro)"
+	name[Group1] = "Russian (phonetic, US-based)";
 	key <TLDE> { [           grave,      asciitilde,               Cyrillic_yu,               Cyrillic_YU ] };
 	key <AE01> { [               1,          exclam,                onequarter,                exclamdown ] }; // [1] ¼  ¡
 	key <AE02> { [               2,              at,                   onehalf,               twosuperior ] }; // [2] ½  ²

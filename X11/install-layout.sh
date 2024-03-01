@@ -16,6 +16,7 @@ else
 	rm() { printf "${cY}WOULD HAVE RUN:${cZ} ${cW}%s${cZ} %s\n" "${FUNCNAME[0]}" "${*}"; }
 	setxkbmap() { printf "${cY}WOULD HAVE RUN:${cZ} ${cW}%s${cZ} %s\n" "${FUNCNAME[0]}" "${*}"; }
 	udevadm() { printf "${cY}WOULD HAVE RUN:${cZ} ${cW}%s${cZ} %s\n" "${FUNCNAME[0]}" "${*}"; }
+	ln() { printf "${cY}WOULD HAVE RUN:${cZ} ${cW}%s${cZ} %s\n" "${FUNCNAME[0]}" "${*}"; }
 fi
 # Check Debian-derivative
 if [[ ! -e /etc/debian_version && ! -e /etc/arch-release && ! -e /etc/manjaro-release  && ! -e /etc/os-release ]]; then
@@ -34,7 +35,7 @@ fi
 if [[ -e /etc/debian_version ]]; then
 	TOOLS_NEEDED+=(dpkg-reconfigure)
 fi
-TOOLS_NEEDED+=(grep install patch rm sed setxkbmap udevadm)
+TOOLS_NEEDED+=(grep install ln patch rm sed setxkbmap udevadm)
 for tool in "${TOOLS_NEEDED[@]}"; do type -p $tool > /dev/null 2>&1 || { printf "${cR}FATAL:${cZ} couldn't find '%s' which is required by this script.\n" "$tool"; exit 1; }; done
 
 # Main script
@@ -63,17 +64,40 @@ for fname in "$XKBDIR/rules"/evdev.{lst,xml}; do
 done
 for fname in "$CURRABSPATH"/{us_ext,ru_us}; do
 	if ! ( [[ -n $DEBUG ]] && set -x; install -p -m 0644 -g root -o root -- "$fname" $XKBDIR/symbols/ ); then
-		printf "${cR}FATAL:${cZ} Removing '${cW}%s${cZ}' ..." "$fname"
+		printf "${cR}FATAL:${cZ} Removing '${cW}%s${cZ}' ...\n" "$fname"
 		( [[ -n $DEBUG ]] && set -x; rm -f -- "$fname" )
 		exit 1
 	fi
 done
+declare -r FLAGDIR="/usr/share/kf5/locale/countries"
+if [[ -d "$FLAGDIR" ]]; then
+	printf "${cW}INFO:${cZ} Making flag icons available via '${cW}%s${cZ}' ...\n" "$FLAGDIR"
+	for layout in us_ext ru_us; do
+		if [[ -L "$FLAGDIR/$layout" ]]; then
+			LNKTGT=$(readlink -nf -- "$FLAGDIR/$layout") || printf "${cY}WARNING:${cZ} failed to read symbolic link ${cW}%s${cZ}.\n" "$FLAGDIR/$layout"
+			printf "${cW}INFO:${cZ} layout '${cW}%s${cZ}' symlinked (-> %s) ...\n" "$layout" "$LNKTGT"
+		else
+			printf "${cW}INFO:${cZ} going to symlink '${cW}%s${cZ}' to correct country.\n" "$layout"
+			case "$layout" in
+			us_ext)
+				( set -x; cd -- "$FLAGDIR" && ln -s -- us "$layout" ) || { printf "${cR}ERROR:${cZ} failed to symlink '${cW}%s${cZ}'.\n"  "$layout"; }
+				;;
+			ru_us)
+				( set -x; cd -- "$FLAGDIR" && ln -s -- ru "$layout" ) || { printf "${cR}ERROR:${cZ} failed to symlink '${cW}%s${cZ}'.\n"  "$layout"; }
+				;;
+			*)
+				printf "${cY}WARNING:${cZ} unsupported layout named ${cW}%s${cZ}.\n" "$layout"
+				;;
+			esac
+		fi
+	done
+fi
 ( [[ -n $DEBUG ]] && set -x; setxkbmap -v 10 -layout us_ext )
 ( [[ -n $DEBUG ]] && set -x; udevadm trigger --subsystem-match=input --action=change )
 fname=/etc/default/keyboard
 if [[ -f "$fname" ]] && ! grep -vq ^XKBLAYOUT=us_ext "$fname"; then
 	if ! ( [[ -n $DEBUG ]] && set -x; sed -i '/XKBLAYOUT/d; i XKBLAYOUT=us_ext' -- "$fname" ); then
-		echo "${cR}ERROR:${cZ} Failed to modify keyboard layout $fname ..."
+		printf "${cR}ERROR:${cZ} Failed to modify keyboard layout %s ...\n" "$fname"
 	elif [[ -e /etc/debian_version ]]; then
 		( [[ -n $DEBUG ]] && set -x; dpkg-reconfigure xkb-data )
 	fi

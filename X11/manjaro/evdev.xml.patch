@@ -1,56 +1,51 @@
 --- evdev.xml.base
 +++ evdev.xml.patched
-@@ -2983,20 +2983,26 @@
+@@ -2969,20 +2969,48 @@
+             <description>Polish (British keyboard)</description>
+             <languageList>
+               <iso639Id>pol</iso639Id>
+             </languageList>
+           </configItem>
+         </variant>
+       </variantList>
+     </layout>
+     <layout>
+       <configItem>
++        <name>ru_us</name>
++        <!-- Keyboard indicator for Russian layouts -->
++        <shortDescription>rux</shortDescription>
++        <description>Russian (phonetic, US-based)</description>
++        <countryList>
++          <iso3166Id>RU</iso3166Id>
++        </countryList>
++        <languageList>
++          <iso639Id>rus</iso639Id>
++        </languageList>
++      </configItem>
++    </layout>
++    <layout>
++      <configItem>
++        <name>us_ext</name>
++        <!-- Keyboard indicator for English layouts -->
++        <shortDescription>enx</shortDescription>
++        <description>English (US + DE, IS, PL, Nordic)</description>
++        <countryList>
++          <iso3166Id>US</iso3166Id>
++        </countryList>
++        <languageList>
++          <iso639Id>eng</iso639Id>
++        </languageList>
++      </configItem>
++    </layout>
++    <layout>
++      <configItem>
+         <name>us</name>
+         <!-- Keyboard indicator for English layouts -->
+         <shortDescription>en</shortDescription>
+         <description>English (US)</description>
          <countryList>
            <iso3166Id>US</iso3166Id>
          </countryList>
          <languageList>
            <iso639Id>eng</iso639Id>
          </languageList>
-       </configItem>
-       <variantList>
-         <variant>
-           <configItem>
-+            <name>us_ext</name>
-+            <description>English (US + DE, IS, PL, Nordic)</description>
-+          </configItem>
-+        </variant>
-+        <variant>
-+          <configItem>
-             <name>euro</name>
-             <description>English (US, euro on 5)</description>
-           </configItem>
-         </variant>
-         <variant>
-           <configItem>
-             <name>intl</name>
-             <description>English (US, intl., with dead keys)</description>
-           </configItem>
-         </variant>
-@@ -5870,20 +5876,26 @@
-         <countryList>
-           <iso3166Id>RU</iso3166Id>
-         </countryList>
-         <languageList>
-           <iso639Id>rus</iso639Id>
-         </languageList>
-       </configItem>
-       <variantList>
-         <variant>
-           <configItem>
-+            <name>ru_us</name>
-+            <description>Russian (phonetic, US-based)</description>
-+          </configItem>
-+        </variant>
-+        <variant>
-+          <configItem>
-             <name>phonetic</name>
-             <description>Russian (phonetic)</description>
-           </configItem>
-         </variant>
-         <variant>
-           <configItem>
-             <name>phonetic_winkeys</name>
-             <description>Russian (phonetic, Windows)</description>
-           </configItem>
-         </variant>
