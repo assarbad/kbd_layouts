@@ -1,11 +1,25 @@
 --- evdev.lst.base
 +++ evdev.lst.patched
-@@ -293,6 +293,8 @@
-   custom          A user-defined custom Layout
+@@ -185,20 +185,22 @@
+   unitekkb1925    Unitek KB-1925
+   compalfl90      FL90
+   creativedw7000  Creative Desktop Wireless 7000
+   teck227         Truly Ergonomic 227
+   teck229         Truly Ergonomic 229
+   apex300         SteelSeries Apex 300 (Apex RAW)
+   chromebook      Chromebook
  
- ! variant
-+  ru_us           us: Russian (phonetic, US-based)
-+  us_ext          us: English (US + DE, IS, PL, Nordic)
-   chr             us: Cherokee
-   haw             us: Hawaiian
-   euro            us: English (US, euro on 5)
+ ! layout
+   us              English (US)
++  us_ext          English (US + DE, IS, PL, Nordic)
++  ru_us           Russian (phonetic, US-based)
+   af              Afghani
+   ara             Arabic
+   al              Albanian
+   am              Armenian
+   at              German (Austria)
+   au              English (Australian)
+   az              Azerbaijani
+   by              Belarusian
+   be              Belgian
+   bd              Bangla
