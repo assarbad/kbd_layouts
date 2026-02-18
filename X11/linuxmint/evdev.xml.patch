@@ -1,0 +1,51 @@
+--- evdev.xml.base
++++ evdev.xml.patched
+@@ -1311,20 +1311,48 @@
+         <name>yahoo</name>
+         <description>Yahoo! Internet</description>
+         <vendor>Yahoo!</vendor>
+       </configItem>
+     </model>
+   </modelList>
+ 
+   <layoutList>
+     <layout>
+       <configItem>
++        <name>ru_us</name>
++        <!-- Keyboard indicator for Russian layouts -->
++        <shortDescription>rux</shortDescription>
++        <description>Russian (phonetic, US-based)</description>
++        <countryList>
++          <iso3166Id>RU</iso3166Id>
++        </countryList>
++        <languageList>
++          <iso639Id>rus</iso639Id>
++        </languageList>
++      </configItem>
++    </layout>
++    <layout>
++      <configItem>
++        <name>us_ext</name>
++        <!-- Keyboard indicator for English layouts -->
++        <shortDescription>enx</shortDescription>
++        <description>English (US + DE, IS, PL, Nordic)</description>
++        <countryList>
++          <iso3166Id>US</iso3166Id>
++        </countryList>
++        <languageList>
++          <iso639Id>eng</iso639Id>
++        </languageList>
++      </configItem>
++    </layout>
++    <layout>
++      <configItem>
+         <name>al</name>
+         <!-- Keyboard indicator for Albanian layouts -->
+         <shortDescription>sq</shortDescription>
+         <description>Albanian</description>
+         <countryList>
+           <iso3166Id>AL</iso3166Id>
+         </countryList>
+         <languageList>
+           <iso639Id>sqi</iso639Id>
+         </languageList>

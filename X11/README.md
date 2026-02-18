@@ -2,7 +2,7 @@
 
 ## xkb version (X11) of `kbdus_xx` (`us_ext`)
 
-**NB:** tested originally on Kubuntu 12.04, then Linux Mint 18.1 and 19, 20, 21, Ubuntu 16.04 through 22.04 and now Manjaro 23.
+**NB:** tested originally on Kubuntu 12.04, then Linux Mint 18.1 and 19, 20, 21, 22.3, Ubuntu 16.04 through 24.04 and now Manjaro 23.
 
 There are lots and lots of resources on how to do it on Ubuntu, but I ended up with different steps anyway in the end. Regardless, [this article](https://michal.kosmulski.org/computing/articles/custom-keyboard-layouts-xkb.html) was probably the single-most useful one in the process. Mind the fact that it has a resource section at the bottom, pointing to further useful resources.
 
