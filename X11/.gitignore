@@ -1,3 +1,5 @@
+evdev.lst
+evdev.xml
 manjaro/*.base
 manjaro/*.orig
 manjaro/evdev.lst
